@@ -73,12 +73,12 @@ class Cliente:
 
     id: Mapped[int] = mapped_column(init=False, primary_key=True)
     nome: Mapped[str] = mapped_column(nullable=False)
-    email: Mapped[str] = mapped_column(nullable=False)
+    email: Mapped[str] = mapped_column(nullable=False, unique=True)
     telefone: Mapped[str] = mapped_column(init=False)
     endereco_num_residencia: Mapped[str] = mapped_column(nullable=False)
     endereco_rua: Mapped[str] = mapped_column(nullable=False)
     endereco_bairro: Mapped[str] = mapped_column(nullable=False)
     endereco_cidade: Mapped[str] = mapped_column(nullable=False)
     endereco_complemento: Mapped[str] = mapped_column(nullable=False)
-    documento: Mapped[str] = mapped_column(init=False)  # CPF ou CNPJ
+    documento: Mapped[str] = mapped_column(init=False, unique=True)  # CPF ou CNPJ
     senha_hash: Mapped[str] = mapped_column(nullable=False)

@@ -53,6 +53,18 @@ class PostCliente(BaseModel):
     password: str
 
 
+class UpdateCliente(BaseModel):
+    nome: Optional[str]
+    email: Optional[EmailStr]
+    telefone: Optional[str]
+    endereco_num_residencia: Optional[str]
+    endereco_rua: Optional[str]
+    endereco_bairro: Optional[str]
+    endereco_cidade: Optional[str]
+    endereco_complemento: Optional[str]
+    documento: Optional[str]
+    password: Optional[str]
+
 class GetCliente(BaseModel):
     id: int
     nome: str
@@ -86,6 +98,13 @@ class GetProduto(BaseModel):
     preco: float
     tipo: TipoProduto
 
+
+class UpdateProduto(BaseModel):
+    nome: Optional[str]
+    descricao: Optional[str]
+    imagem_link: Optional[str]
+    preco: Optional[float]
+    tipo: Optional[TipoProduto]
 
 class PostCombo(BaseModel):
     nome: str

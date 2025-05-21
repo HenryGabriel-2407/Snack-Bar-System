@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro de Cliente</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    label { display: block; margin-top: 1rem; }
+    input, textarea { width: 300px; }
+    #resposta { margin-top: 2rem; white-space: pre-wrap; background: #eee; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Cadastro de Cliente</h1>
+  <form id="formulario">
+    <label>Nome: <input type="text" name="nome" required></label>
+    <label>Email: <input type="email" name="email" required></label>
+    <label>Telefone: <input type="text" name="telefone"></label>
+    <label>Documento: <input type="text" name="documento"></label>
+    <label>Rua: <input type="text" name="endereco_rua"></label>
+    <label>Número: <input type="text" name="endereco_num_residencia"></label>
+    <label>Bairro: <input type="text" name="endereco_bairro"></label>
+    <label>Cidade: <input type="text" name="endereco_cidade"></label>
+    <label>Complemento: <textarea name="endereco_complemento"></textarea></label>
+    <label>Senha: <input type="password" name="password"></label>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div id="resposta"></div>
+
+  <script src="/snack-bar-system/static/js/script.js"></script>
+</body>
+</html>
